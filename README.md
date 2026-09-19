@@ -3,6 +3,8 @@
 
 An analysis of real-world fuel price data across Germany, with a dedicated deep-dive into Bavaria. The goal was to find patterns in pricing — by time of day, day of month, region, and fuel brand — that could help drivers make smarter refuelling decisions.
 
+**[🔗 Explore the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/vladyslav.yakymchuk/viz/PortfolioTankkoenigGeneralDecember2025/state_avg_e5)**
+
 ---
 
 ## Key Findings
@@ -25,7 +27,7 @@ An analysis of real-world fuel price data across Germany, with a dedicated deep-
 
 **Bavaria vs Germany:** Bavaria follows the national trend almost exactly, with slightly smoother daily fluctuations.
 
-*Full reports with all charts (brand breakdown, both fuel types, station-network maps): [`Analysis of fuel prices in Germany.pdf`](<Analysis of fuel prices in Germany.pdf>), [`Analysis of fuel prices in Bayern.pdf`](<Analysis of fuel prices in Bayern.pdf>)*
+*Full reports with all charts (brand breakdown, both fuel types, station-network maps): [`Analysis of fuel prices in Germany.pdf`](<Analysis of fuel prices in Germany.pdf>), [`Analysis of fuel prices in Bayern.pdf`](<Analysis of fuel prices in Bayern.pdf>) — or click through the charts yourself on the [interactive Tableau dashboard](https://public.tableau.com/app/profile/vladyslav.yakymchuk/viz/PortfolioTankkoenigGeneralDecember2025/state_avg_e5).*
 
 ---
 
@@ -63,7 +65,7 @@ Both notebooks document each cleaning step inline (problem → action → result
 ## Tools & Methods
 
 - **Python** (pandas, NumPy, GeoPandas) — data cleaning, aggregation, geospatial join, transformation
-- **Tableau** — choropleth maps, time series charts, bar charts
+- **Tableau** — choropleth maps, time series charts, bar charts; [published on Tableau Public](https://public.tableau.com/app/profile/vladyslav.yakymchuk/viz/PortfolioTankkoenigGeneralDecember2025/state_avg_e5)
 - **Tankerkönig API** — real-time German fuel price data (MTS-K)
 - Analysis covers ~15,000+ active stations (17,707 registered) across all 16 German federal states
 
@@ -73,4 +75,4 @@ Both notebooks document each cleaning step inline (problem → action → result
 
 Data provided by [Tankerkönig UG](https://tankerkoenig.de) via their public API, based on data from the German Market Transparency Unit for Fuels (MTS-K).
 
-Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Project is non-commercial and for portfolio purposes only. No raw data is redistributed.
+Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Project is non-commercial and for portfolio purposes only. No raw data is redistributed — this also applies to the processed/aggregated CSV files the notebooks generate (`tankkoenig_hourly_prices.csv`, `tankkoenig_daily_prices.csv`, `tankkoenig_station_times_prices.csv`, `cleaned_tankstellen.csv`): they're produced locally when the notebooks run, but aren't included in this repository.
